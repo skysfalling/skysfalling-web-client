@@ -1,0 +1,33 @@
+@import '../../styles/main.css';
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+    background-color: var(--primary-hover);
+    color: var(--surface-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+} 

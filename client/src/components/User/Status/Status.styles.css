@@ -1,0 +1,41 @@
+.user-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.status-indicator {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.status-indicator.online {
+  background-color: #4caf50;
+}
+
+.status-indicator.offline {
+  background-color: #9e9e9e;
+}
+
+.status-indicator.away {
+  background-color: #ff9800;
+}
+
+.status-indicator.busy {
+  background-color: #f44336;
+}
+
+.status-text {
+  text-transform: capitalize;
+  color: #666;
+}
+
+.last-active {
+  color: #888;
+  font-size: 0.75rem;
+  margin-left: auto;
+} 

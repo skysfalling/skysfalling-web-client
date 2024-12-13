@@ -1,0 +1,183 @@
+/* Base theme variables */
+:root {
+  /* Global tokens - foundational values that don't change between themes */
+  --font-family: 'Questrial-Regular', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  --code-font-family: Consolas, monaco, monospace;
+  
+  /* Spacing Scale */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  /* Border Radius Scale */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+  
+  /* Z-index Scale */
+  --z-negative: -1;
+  --z-base: 0;
+  --z-elevated: 1;
+  --z-sticky: 100;
+  --z-drawer: 200;
+  --z-modal: 300;
+  --z-popover: 400;
+  --z-toast: 500;
+  
+  /* Layout Constraints */
+  --page-max-width: 1000px;
+  --content-max-width: 800px;
+  --sidebar-width: 250px;
+
+  /* Debug Colors */
+  --debug-background: #e3f2fd;
+  --debug-border: #90caf9;
+  --debug-text: #1565c0;
+
+  /* Status Colors */
+  --status-error-color: var(--red-500);
+  --status-success-color: var(--green-500);
+  --status-warning-color: var(--yellow-500);
+}
+
+/* ===================================================================== */
+/* ===================================================================== */
+/* ===================================================================== */
+
+/* #region << LIGHT THEME >> ( Default ) ================ >> */
+:root,
+[color-theme="light"] {
+  /* (( Background Hierarchy )) -------- >> */
+  --theme-background-base: var(--shark-50);
+  --theme-background-elevated: var(--shark-100);
+  --theme-background-sunken: var(--shark-200);
+  --theme-background-overlay: rgba(0, 0, 0, 0.5);
+  --theme-background-hover: var(--shark-100);
+  --theme-background-active: var(--shark-200);
+  --theme-background-selected: var(--pink-salmon-50);
+  --theme-background-disabled: var(--shark-100);
+
+  /* (( Text Hierarchy )) -------- >> */
+  --theme-text-primary: var(--shark-950);
+  --theme-text-secondary: var(--shark-700);
+  --theme-text-tertiary: var(--shark-500);
+  --theme-text-disabled: var(--shark-400);
+  --theme-text-inverse: var(--shark-50);
+  --theme-text-brand: var(--pink-salmon-600);
+
+  /* (( Interactive States )) -------- >> */
+  --theme-interactive-primary: var(--pink-salmon-500);
+  --theme-interactive-primary-hover: var(--pink-salmon-600);
+  --theme-interactive-primary-active: var(--pink-salmon-700);
+  --theme-interactive-primary-disabled: var(--pink-salmon-300);
+  --theme-interactive-secondary: var(--shark-200);
+  --theme-interactive-secondary-hover: var(--shark-300);
+  --theme-interactive-secondary-active: var(--shark-400);
+  --theme-interactive-secondary-disabled: var(--shark-100);
+
+  /* (( Surface Treatments )) -------- >> */
+  --theme-surface-default: #ffffff;
+  --theme-surface-elevated: var(--shark-50);
+  --theme-surface-sunken: var(--shark-100);
+  --theme-surface-inverse: var(--shark-900);
+  --theme-surface-brand: var(--pink-salmon-500);
+  --theme-surface-error: var(--red-50);
+  --theme-surface-success: var(--green-50, #f0fdf4);
+  --theme-surface-warning: var(--yellow-50, #fefce8);
+
+  /* (( Border Treatments )) -------- >> */
+  --theme-border-default: var(--shark-200);
+  --theme-border-hover: var(--shark-300);
+  --theme-border-focus: var(--pink-salmon-500);
+  --theme-border-error: var(--red-500, #ef4444);
+  --theme-border-success: var(--green-500, #22c55e);
+  --theme-border-warning: var(--yellow-500, #eab308);
+  --theme-border-inverse: var(--shark-900);
+  --theme-border-brand: var(--pink-salmon-500);
+
+  /* (( Shadow Hierarchy )) -------- >> */
+  --theme-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --theme-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --theme-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --theme-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --theme-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+  --theme-shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  /* (( Focus Rings )) -------- >> */
+  --theme-focus-ring: 0 0 0 3px var(--pink-salmon-200);
+  --theme-focus-ring-error: 0 0 0 3px var(--red-200);
+  --theme-focus-ring-success: 0 0 0 3px var(--green-200);
+  --theme-focus-ring-warning: 0 0 0 3px var(--yellow-200);
+}
+/* #endregion << LIGHT THEME >> ================ >> */
+  
+/* #region << DARK THEME >> ================ >> */
+[color-theme="dark"] {
+  /* (( Background Hierarchy )) -------- >> */
+  --theme-background-base: var(--shark-950);
+  --theme-background-elevated: var(--shark-900);
+  --theme-background-sunken: var(--shark-800);
+  --theme-background-overlay: rgba(0, 0, 0, 0.75);
+  --theme-background-hover: var(--shark-800);
+  --theme-background-active: var(--shark-700);
+  --theme-background-selected: var(--pink-salmon-900);
+  --theme-background-disabled: var(--shark-800);
+
+  /* (( Text Hierarchy )) -------- >> */
+  --theme-text-primary: var(--shark-50);
+  --theme-text-secondary: var(--shark-300);
+  --theme-text-tertiary: var(--shark-500);
+  --theme-text-disabled: var(--shark-600);
+  --theme-text-inverse: var(--shark-950);
+  --theme-text-brand: var(--pink-salmon-400);
+
+  /* (( Interactive States )) -------- >> */
+  --theme-interactive-primary: var(--pink-salmon-400);
+  --theme-interactive-primary-hover: var(--pink-salmon-500);
+  --theme-interactive-primary-active: var(--pink-salmon-600);
+  --theme-interactive-primary-disabled: var(--pink-salmon-300);
+  --theme-interactive-secondary: var(--shark-700);
+  --theme-interactive-secondary-hover: var(--shark-600);
+  --theme-interactive-secondary-active: var(--shark-500);
+  --theme-interactive-secondary-disabled: var(--shark-800);
+
+  /* (( Surface Treatments )) -------- >> */
+  --theme-surface-default: var(--shark-900);
+  --theme-surface-elevated: var(--shark-800);
+  --theme-surface-sunken: var(--shark-950);
+  --theme-surface-inverse: var(--shark-50);
+  --theme-surface-brand: var(--pink-salmon-900);
+  --theme-surface-error: var(--red-900);
+  --theme-surface-success: var(--green-900);
+  --theme-surface-warning: var(--yellow-900);
+
+  /* (( Border Treatments )) -------- >> */
+  --theme-border-default: var(--shark-800);
+  --theme-border-hover: var(--shark-700);
+  --theme-border-focus: var(--pink-salmon-400);
+  --theme-border-error: var(--red-400);
+  --theme-border-success: var(--green-400);
+  --theme-border-warning: var(--yellow-400);
+  --theme-border-inverse: var(--shark-50);
+  --theme-border-brand: var(--pink-salmon-400);
+
+  /* (( Shadow Hierarchy )) -------- >> */
+  --theme-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --theme-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --theme-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.5);
+  --theme-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+  --theme-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.5);
+  --theme-shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  /* (( Focus Rings )) -------- >> */
+  --theme-focus-ring: 0 0 0 3px var(--pink-salmon-800);
+  --theme-focus-ring-error: 0 0 0 3px var(--red-800);
+  --theme-focus-ring-success: 0 0 0 3px var(--green-800);
+  --theme-focus-ring-warning: 0 0 0 3px var(--yellow-800);
+}
+/* #endregion << DARK THEME >> ================ >> */

@@ -1,0 +1,31 @@
+.gallery-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    inline-size: 100%;
+    block-size: 100%;
+}
+
+.loading, .error {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.loading {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+}
+
+.error {
+    background-color: var(--error-background, #ffebee);
+    color: var(--error-text, #c62828);
+    border: 1px solid var(--error-border, #ef9a9a);
+    text-align: left;
+}

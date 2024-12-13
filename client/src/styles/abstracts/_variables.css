@@ -1,0 +1,61 @@
+:root {
+    --cornflower-lilac-50: #fdf4f3;
+    --cornflower-lilac-100: #fbe7e5;
+    --cornflower-lilac-200: #f8d3d0;
+    --cornflower-lilac-300: #f2b2ac;
+    --cornflower-lilac-400: #e98980;
+    --cornflower-lilac-500: #dc6257;
+    --cornflower-lilac-600: #c8463a;
+    --cornflower-lilac-700: #a8382d;
+    --cornflower-lilac-800: #8b3129;
+    --cornflower-lilac-900: #742f28;
+    --cornflower-lilac-950: #3e1511;
+  
+    --pink-salmon-50: #fef2f3;
+    --pink-salmon-100: #fde6e9;
+    --pink-salmon-200: #fad1d7;
+    --pink-salmon-300: #f6abb6;
+    --pink-salmon-400: #f28d9f;
+    --pink-salmon-500: #e64d6c;
+    --pink-salmon-600: #d12d56;
+    --pink-salmon-700: #b02048;
+    --pink-salmon-800: #941d42;
+    --pink-salmon-900: #7f1c3e;
+    --pink-salmon-950: #460b1d;
+  
+    --bismark-50: #f2f7f9;
+    --bismark-100: #deebef;
+    --bismark-200: #c1d9e0;
+    --bismark-300: #96bdca;
+    --bismark-400: #6498ac;
+    --bismark-500: #46788c;
+    --bismark-600: #3f677b;
+    --bismark-700: #385666;
+    --bismark-800: #344956;
+    --bismark-900: #2f3f4a;
+    --bismark-950: #1b2831;
+  
+    --bright-gray-50: #f5f6fa;
+    --bright-gray-100: #ebedf3;
+    --bright-gray-200: #d2d8e5;
+    --bright-gray-300: #abb7ce;
+    --bright-gray-400: #7e91b2;
+    --bright-gray-500: #5e7399;
+    --bright-gray-600: #4a5b7f;
+    --bright-gray-700: #3d4a67;
+    --bright-gray-800: #364159;
+    --bright-gray-900: #30384a;
+    --bright-gray-950: #202431;
+  
+    --shark-50: #f7f7f8;
+    --shark-100: #ededf1;
+    --shark-200: #d8d9df;
+    --shark-300: #b6b7c3;
+    --shark-400: #8e90a2;
+    --shark-500: #707287;
+    --shark-600: #5a5b6f;
+    --shark-700: #4a4a5a;
+    --shark-800: #3f404d;
+    --shark-900: #383842;
+    --shark-950: #202026;
+  }

@@ -1,0 +1,199 @@
+:root {
+  /* Base values */
+  --font-base-size: 1rem;      /* 16px */
+  
+  /* Type scale ratios */
+  --ratio-small: 1.125;        /* Reduced from 1.2 - smaller step for mobile */
+  --ratio-large: 1.15;         /* Reduced from 1.25 - smaller step for desktop */
+  
+  /* Viewport breakpoints */
+  --viewport-sm: 320px;
+  --viewport-lg: 1240px;
+
+  /* << FONT SIZES >> ====================================================== */
+  /* Fluid font sizes using clamp() */
+
+  /* ( XXXXSmall ) Resolves to 6px on mobile, 8px on desktop */
+  --font-size-xxxxs: clamp(
+    calc(var(--font-base-size) / var(--ratio-small) / var(--ratio-small) / var(--ratio-small) / var(--ratio-small)),
+    calc(0.375rem + 0.1vw),
+    calc(var(--font-base-size) / var(--ratio-large) / var(--ratio-large) / var(--ratio-large) / var(--ratio-large))
+  );
+
+  /* ( XXXSmall ) Resolves to 8px on mobile, 10px on desktop */
+  --font-size-xxxs: clamp(
+    calc(var(--font-base-size) / var(--ratio-small) / var(--ratio-small) / var(--ratio-small)),
+    calc(0.5rem + 0.1vw),
+    calc(var(--font-base-size) / var(--ratio-large) / var(--ratio-large) / var(--ratio-large))
+  );
+
+  /* ( XXSmall ) Resolves to 10px on mobile, 12px on desktop */
+  --font-size-xxs: clamp(
+    calc(var(--font-base-size) / var(--ratio-small) / var(--ratio-small)),
+    calc(0.625rem + 0.1vw),
+    calc(var(--font-base-size) / var(--ratio-large) / var(--ratio-large))
+  );
+
+  /* ( XSmall ) Resolves to 12px on mobile, 14px on desktop */
+  --font-size-xs: clamp(
+    calc(var(--font-base-size) / var(--ratio-small)),
+    calc(0.75rem + 0.1vw),
+    calc(var(--font-base-size) / var(--ratio-large))
+  );
+  
+  /* ( Small ) Resolves to 14px on mobile, 16px on desktop */
+  --font-size-sm: clamp(
+    calc(var(--font-base-size) / (var(--ratio-small) * 0.5)),
+    calc(0.875rem + 0.1vw),
+    calc(var(--font-base-size) / (var(--ratio-large) * 0.5))
+  );
+  
+  /* ( Base ) Resolves to 16px on mobile, 18px on desktop */
+  --font-size-base: var(--font-base-size);
+  
+  /* ( Large ) Resolves to 18px on mobile, 20px on desktop */
+  --font-size-lg: clamp(
+    calc(var(--font-base-size) * var(--ratio-small)),
+    calc(1.125rem + 0.2vw),
+    calc(var(--font-base-size) * var(--ratio-large))
+  );
+
+  /* ( XLarge ) Resolves to 20px on mobile, 24px on desktop */
+  --font-size-xl: clamp(
+    calc(var(--font-base-size) * pow(var(--ratio-small), 2)),
+    calc(1.25rem + 0.3vw),
+    calc(var(--font-base-size) * pow(var(--ratio-large), 2))
+  );
+
+  /* ( 2XLarge ) Resolves to 24px on mobile, 32px on desktop */
+  --font-size-2xl: clamp(
+    calc(var(--font-base-size) * pow(var(--ratio-small), 3)),
+    calc(1.5rem + 0.4vw),
+    calc(var(--font-base-size) * pow(var(--ratio-large), 3))
+  );
+
+  /* ( 3XLarge ) Resolves to 32px on mobile, 40px on desktop */
+  --font-size-3xl: clamp(
+    calc(var(--font-base-size) * pow(var(--ratio-small), 4)),
+    calc(1.75rem + 0.5vw),
+    calc(var(--font-base-size) * pow(var(--ratio-large), 4))
+  );
+
+  /* ( 4XLarge ) Resolves to 32px on mobile, 40px on desktop */
+  --font-size-4xl: clamp(
+    calc(var(--font-base-size) * pow(var(--ratio-small), 5)),
+    calc(2rem + 0.6vw),
+    calc(var(--font-base-size) * pow(var(--ratio-large), 5))
+  );
+  
+  /* << LINE HEIGHTS >> ==================================================== */
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+  
+  /* << FONT WEIGHTS >> ===================================================== */
+  --font-weight-thin: 100;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+  
+  /* << LETTER SPACING >> ================================================== */
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+}
+
+body {
+  font-family: var(--font-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+  letter-spacing: var(--letter-spacing-tight);
+  margin-block-end: 1.5rem;
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+  letter-spacing: var(--letter-spacing-tight);
+  margin-block-end: 1.25rem;
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+  margin-block-end: 1rem;
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+  margin-block-end: 0.75rem;
+}
+
+h5 {
+  font-size: var(--font-size-lg);
+  margin-block-end: 0.5rem;
+}
+
+h6 {
+  font-size: var(--font-size-base);
+  margin-block-end: 0.5rem;
+}
+
+p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+}
+
+small, .text-small {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+.text-large {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+code, pre {
+  font-family: var(--code-font-family, source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+.text-primary { color: var(--theme-text-primary); }
+.text-secondary { color: var(--theme-text-secondary); }
+.text-tertiary { color: var(--theme-text-tertiary); }
+.text-brand { color: var(--theme-text-brand); }
+.text-error { color: var(--theme-text-error); }
+.text-success { color: var(--theme-text-success); }
+.text-warning { color: var(--theme-text-warning); }
+
+.text-center { text-align: center; }
+.text-left { text-align: start; }
+.text-right { text-align: end; }
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+} 

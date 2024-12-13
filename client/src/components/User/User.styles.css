@@ -1,0 +1,161 @@
+@import "../../styles/main.css";
+
+.card-container {
+    display: block;
+    
+    margin: 10px;
+    padding: 25px;
+
+    max-inline-size: 300px;
+    
+    color: var(--theme-text-primary);
+    background-color: var(--theme-background-base);
+
+    border-radius: 8px;
+    box-shadow: var(--theme-shadow-lg);
+    border: 1px solid var(--theme-border-default);
+}
+
+/* ================ << Form Group >> ================ */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px;
+}
+
+.form-input {
+    padding: 0.75rem;
+    background-color: var(--theme-surface-default);
+    color: var(--theme-text-primary);
+    border: 1px solid var(--theme-border-e);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--pink-salmon-400);
+    box-shadow: 0 0 0 2px var(--pink-salmon-100);
+}
+
+.form-input .valid {
+    border-color: var(--theme-border-success);
+    box-shadow: 0 0 0 2px var(--theme-border-success);
+}
+
+.form-input .invalid {
+    border-color: var(--theme-border-error);
+    box-shadow: 0 0 0 2px var(--theme-border-error);
+}
+
+/* ================ << Success Message >> ================ */
+.submit-result {
+    margin-block-start: 1rem;
+    text-align: center;
+}
+
+.submit-result-error {
+    color: #dc3545;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: #f8d7da;
+}
+
+.submit-result-success {
+    color: #28a745;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: #d4edda;
+}
+
+/* ================ << Error Message >> ================ */
+.error-message {
+    color: #dc3545;
+    border-radius: 4px;
+
+    font-size: 0.8rem;
+}
+
+/* ================ << Submit Button >> ================ */
+button {
+    inline-size: 100%;
+    padding: 10px;
+    background-color: var(--theme-interactive-primary);
+    color: var(--theme-text-on-primary);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+    background-color: var(--theme-interactive-primary-hover);
+}
+
+button:disabled {
+    background-color: var(--theme-interactive-disabled);
+    cursor: not-allowed;
+}
+
+/* ================ USER PROFILE CARD ================ */
+.user-profile-card {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    block-size: var(--card-height);
+    inline-size: var(--card-width);
+
+    align-items: center;
+    
+    padding: var(--spacing-md);
+    gap: 10px;
+
+    color: var(--theme-text-primary);
+    background-color: var(--theme-background-base);
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: var(--theme-shadow-lg);
+}
+
+.user-profile-card:hover {
+    /* transform: translateY(-2px); */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* ================ USER AVATAR ================ */
+.user-profile-avatar {
+    aspect-ratio: 1 / 1;
+    block-size: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-profile-avatar img {
+    object-fit: cover;
+    padding: 10px;
+
+    border-radius: 50%;
+    border: 2px solid var(--theme-border-inverse);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ================ USER PROFILE DETAILS ================ */
+.user-profile-details {
+    inline-size: 75%;
+}
+
+.user-profile-details h2 {
+    font-size: 1rem;
+    color: var(--theme-text-primary);
+}
+
+.user-profile-details p {
+    color: var(--theme-text-secondary);
+}

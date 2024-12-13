@@ -3,14 +3,11 @@
   "private": true,
   "workspaces": [
     "client/*",
-    "shared/*",
-    "server/*"
+    "shared/*"
   ],
   "scripts": {
     "start": "npm run start --workspace=client",
     "start:client": "npm run start --workspace=client",
-    "start:server": "npm run start --workspace=server",
-    "dev": "concurrently \"npm run start:client\" \"npm run start:server\"",
     "build": "npm run build --workspaces",
     "test": "npm run test --workspaces"
   },
